@@ -19,15 +19,21 @@ from random import randint
 from getch import pause
 
 
-respostas1 = ("It is certain.", 'It is decidedly so.','Yes - definitely.', 'You may rely on it.', 'As I see it, yes.')
-respostas2 = ("Most likely.", 'Outlook good.','Yes.', 'Signs point to yes.', 'Without a doubt.')
-respostas3 = ("Reply hazy, try again.", 'Ask again later.','Better not tell you now.', 'Cannot predict now.', ' Concentrate and ask again.')
-respostas4 = (" Don't count on it.", ' My reply is no.','My sources say no.', 'Outlook not so good.', 'Very doubtful')
+RESPOSTAS1 = ("It is certain.", 'It is decidedly so.','Yes - definitely.', 'You may rely on it.', 'As I see it, yes.')
+RESPOSTAS2 = ("Most likely.", 'Outlook good.','Yes.', 'Signs point to yes.', 'Without a doubt.')
+RESPOSTAS3 = ("Reply hazy, try again.", 'Ask again later.','Better not tell you now.', 'Cannot predict now.', ' Concentrate and ask again.')
+RESPOSTAS4 = (" Don't count on it.", ' My reply is no.','My sources say no.', 'Outlook not so good.', 'Very doubtful')
 
-respostas = (respostas1, respostas2, respostas3, respostas4)
-while True:
-    os.system('cls')
-    pause('What do you wanna know?')
-    i = randint(0, 3)
-    j = randint(0, 4)
-    pause(respostas[i][j])
+RESPOSTAS = (RESPOSTAS1, RESPOSTAS2, RESPOSTAS3, RESPOSTAS4)
+
+
+def main():
+    while True:
+        os.system('cls')
+        pause('What do you wanna know?')
+        i = randint(0, 3)
+        j = randint(0, 4)
+        pause(RESPOSTAS[i][j])
+
+if __name__=="__main__":
+    main()
